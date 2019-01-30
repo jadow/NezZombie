@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Nez;
+using Nez.Sprites;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +22,9 @@ namespace NezZombie.Scenes
 
             // mapLoaderEntity.addComponent(new MapLoader(playerEntity));
 
-            // var playerTexture = content.Load<Texture2D>("tinyRPG-forest-code/PNG/sprites/hero/idle/hero-idle-back/hero-idle-back");
-            //playerEntity.addComponent(new Sprite(playerTexture));
-            playerEntity.addComponent(new PrototypeSprite(16, 16)).setColor(Color.Red);
+            var playerTexture = content.Load<Texture2D>("tinyRPG-forest-code/PNG/sprites/hero/idle/hero-idle-back/hero-idle-back");
+            playerEntity.addComponent(new Sprite(playerTexture));
+            //playerEntity.addComponent(new PrototypeSprite(16, 16)).setColor(Color.Red);
 
             //playerEntity.addComponent(new PlayerMover());
 
