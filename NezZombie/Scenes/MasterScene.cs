@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using Nez.Sprites;
+using NezZombie.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,9 @@ namespace NezZombie.Scenes
             //playerEntity.addComponent(new PrototypeSprite(16, 16)).setColor(Color.Red);
 
             //playerEntity.addComponent(new PlayerMover());
+
+            var testMap = createEntity("testMap");
+            testMap.addComponent(new TestMap());
 
             playerEntity.setPosition(new Vector2(0, 0));
         }
